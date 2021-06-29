@@ -1,0 +1,9 @@
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\bin\Debug\Business.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\bin\Debug\Business.pdb
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\obj\Debug\Business.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\obj\Debug\Business.pdb
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\bin\Debug\FluentValidation.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\bin\Debug\FluentValidation.xml
+C:\Users\geibi\source\repos\24-04-Casa\src\Business\obj\Debug\Business.csproj.CopyComplete

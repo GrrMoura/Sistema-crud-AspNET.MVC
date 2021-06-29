@@ -1,0 +1,16 @@
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\Infra.dll.config
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\Infra.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\Infra.pdb
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\Business.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\EntityFramework.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\Business.pdb
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\EntityFramework.xml
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\obj\Debug\Infra.csprojAssemblyReference.cache
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\obj\Debug\Infra.csproj.CoreCompileInputs.cache
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\obj\Debug\Infra.csproj.CopyComplete
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\obj\Debug\Infra.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\obj\Debug\Infra.pdb
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\FluentValidation.dll
+C:\Users\geibi\source\repos\24-04-Casa\src\Infra\bin\Debug\FluentValidation.xml

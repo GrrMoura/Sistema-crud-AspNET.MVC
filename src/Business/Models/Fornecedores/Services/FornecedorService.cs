@@ -56,7 +56,7 @@ namespace Business.Models.Fornecedores.Services
 
             if (fornecedor.Endereco != null)
             {
-               
+
                 await _enderecoRepository.Remover(id);
             }
 
@@ -67,15 +67,18 @@ namespace Business.Models.Fornecedores.Services
         public async Task AtualizarEndereco(Endereco endereco)
         {
             if (!ExecutarValidacao(new EnderecoValidation(), endereco)) return;
-                       
-            
+
+
             await _enderecoRepository.Atualizar(endereco);
 
         }
 
         private async Task<bool> FornecedorExistente(Fornecedor fornecedor)
         {
-            var fornecedorAtual = await _fornecedorRespository.Buscar(f => f.Id == fornecedor.Id && f.Documento != fornecedor.Documento);
+            var fornecedorAtual = await _fornecedorRespository
+                .Buscar(f => f.Documento == fornecedor.Documento &&
+                 f.Id != fornecedor.Id
+                );
 
             if (fornecedorAtual.Any())
             {

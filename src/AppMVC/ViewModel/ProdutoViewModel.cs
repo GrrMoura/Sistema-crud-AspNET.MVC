@@ -28,8 +28,8 @@ namespace AppMVC.ViewModel
 
         public string Imagem { get; set; }
 
-        [DisplayName("Imagem do Produto")]
-        public HttpPostedFileBase ImagemUpload { get; set; }
+        //[DisplayName("Imagem do Produto")]
+        //public HttpPostedFileBase ImagemUpload { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public decimal Preco { get; set; }
@@ -38,17 +38,17 @@ namespace AppMVC.ViewModel
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public Guid FornecedorId { get; set; }
 
-        [ScaffoldColumn(false)]
-        public DateTime DataCadastro { get; set; }
+        //[ScaffoldColumn(false)]
+        //public DateTime DataCadastro { get; set; }
 
         [DisplayName("Ativo?")]
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public bool Ativo { get; set; }
 
 
-        public FornecedorViewModel Fornecedor  { get; set; }
+        //public FornecedorViewModel Fornecedor  { get; set; }
 
-        public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
+        //public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
 
 
     }

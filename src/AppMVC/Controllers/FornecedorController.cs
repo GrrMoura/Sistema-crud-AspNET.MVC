@@ -21,13 +21,16 @@ namespace AppMVC.Controllers
     {
         protected readonly IFornecedorService _fornecedorService;
         protected readonly IFornecedorRepository _fornecedorRepository;
+        protected readonly IEnderecoRepository _enderecoRepository;
         private readonly IMapper _mapper;
 
         public FornecedorController(IFornecedorRepository fornecedorRepository,
                                     IFornecedorService fornecedorService,
+                                    IEnderecoRepository enderecoRepository,
                                      IMapper mapper)
         {
             _fornecedorRepository = fornecedorRepository;
+            _enderecoRepository = enderecoRepository;
             _fornecedorService = fornecedorService;
             _mapper = mapper;
         }
@@ -55,7 +58,7 @@ namespace AppMVC.Controllers
 
         [Route("novo-usuario")]
         [HttpGet]
-        [Authorize(Roles = "funcionario")]
+   
         public ActionResult Create()
         {
             return View();
@@ -63,7 +66,7 @@ namespace AppMVC.Controllers
 
         [Route("novo-usuario")]
         [HttpPost]
-        [Authorize(Roles = "funcionario")]
+        
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(FornecedorViewModel fornecedorViewModel)
         {
@@ -81,7 +84,7 @@ namespace AppMVC.Controllers
 
         [Route("editar-funcionario/{id:guid}")]
         [HttpGet]
-        [Authorize(Roles = "funcionario")]
+       
         public async Task<ActionResult> Edit(Guid id)
         {
             var fornecedorViewModel = await ObterFornecedor(id);
@@ -102,7 +105,36 @@ namespace AppMVC.Controllers
 
             if (ModelState.IsValid)
             {
-                await _fornecedorService.Atualizar(_mapper.Map<Fornecedor>(fornecedorViewModel)));
+                await _fornecedorService.Atualizar(_mapper.Map<Fornecedor>(fornecedorViewModel));
+                return RedirectToAction("Index");
+            }
+            return View(fornecedorViewModel);
+        }
+
+        [Route("editar-endereco/{id:guid}")]
+        [HttpGet]
+        [Authorize(Roles = "funcionario")]
+        public async Task<ActionResult> EditEnd(Guid id)
+        {
+            var fornecedorViewModel = await ObterFornecedor(id);
+
+            if (fornecedorViewModel == null)
+            {
+                return HttpNotFound();
+            }
+            return View(fornecedorViewModel);
+        }
+
+        [Route("editar-endereco/{id:guid}")]
+        [HttpPost]
+        [Authorize(Roles = "funcionario")]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> EditEnd(FornecedorViewModel fornecedorViewModel)
+        {
+
+            if (ModelState.IsValid)
+            {
+                await _fornecedorService.AtualizarEndereco(_mapper.Map<Endereco>(fornecedorViewModel));
                 return RedirectToAction("Index");
             }
             return View(fornecedorViewModel);
@@ -133,7 +165,7 @@ namespace AppMVC.Controllers
             {
                 return HttpNotFound();
             }
-
+            await _fornecedorService.Remover(id);
             return RedirectToAction("Index");
         }
 

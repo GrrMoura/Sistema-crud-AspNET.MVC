@@ -20,11 +20,6 @@ namespace AppMVC.Controllers
         {
         }
 
-        public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
-        {
-            UserManager = userManager;
-            SignInManager = signInManager;
-        }
 
         public ApplicationSignInManager SignInManager
         {
@@ -32,9 +27,9 @@ namespace AppMVC.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -333,7 +328,7 @@ namespace AppMVC.Controllers
             base.Dispose(disposing);
         }
 
-#region Auxiliadores
+        #region Auxiliadores
         // Usado para proteção XSRF ao adicionar logins externos
         private const string XsrfKey = "XsrfId";
 
@@ -384,6 +379,6 @@ namespace AppMVC.Controllers
             Error
         }
 
-#endregion
+        #endregion
     }
 }

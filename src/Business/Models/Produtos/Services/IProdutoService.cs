@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Business.Models.Produtos.Services
 {
-    interface IProdutoService : IDisposable
+    public interface IProdutoService : IDisposable
     {
         Task Adicionar(Produto produto);
         Task Atualizar(Produto produto);

@@ -1,3 +1,4 @@
+using AppMVC.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace AppMVC
     {
         protected void Application_Start()
         {
+            SimpleInjectConfig.RegisterDIContainer();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
